@@ -21,6 +21,7 @@ class bitrix_module extends CModule
 	var $MODULE_DESCRIPTION;
 	var $PARTNER_NAME;
 	var $PARTNER_URI;
+	var $DIR;
 
     protected $LOC_PREFIX;
     protected $FILE_PREFIX;
@@ -40,6 +41,12 @@ class bitrix_module extends CModule
 
         $this->PARTNER_NAME = Loc::getMessage($this->LOC_PREFIX .'PARTNER_NAME');
         $this->PARTNER_URI = Loc::getMessage($this->LOC_PREFIX .'PARTNER_URI');
+	    
+        if (stripos(__FILE__, $_SERVER['DOCUMENT_ROOT'] . '/local/modules') !== false) {
+            $this->DIR = 'local';
+        } else {
+            $this->DIR = 'bitrix';
+        }
     }
 
     public function DoInstall()
