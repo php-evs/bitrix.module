@@ -12,9 +12,9 @@ Loc::loadMessages(__FILE__);
 
 require_once __DIR__ .'/../helper.php';
 
-class b01110011_recaptcha extends CModule
+class bitrix_module extends CModule
 {
-    var $MODULE_ID = 'b01110011.recaptcha';
+    var $MODULE_ID = 'bitrix_module';
 	var $MODULE_VERSION;
 	var $MODULE_VERSION_DATE;
 	var $MODULE_NAME;
