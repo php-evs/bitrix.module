@@ -139,10 +139,7 @@ class bitrix_module extends CModule
         // $EventManager = EventManager::getInstance();
 
         // проверка на спам
-        // $EventManager->registerEventHandler('main', 'OnBeforeProlog', $this->MODULE_ID, 'GoogleCaptcha', 'initCheckSpam');
-
-        // инициализация js
-        // $EventManager->registerEventHandler('main', 'OnProlog', $this->MODULE_ID, 'GoogleCaptcha', 'initJS');
+        // $EventManager->registerEventHandler('main', 'OnBeforeProlog', $this->MODULE_ID, 'ClassName', 'initFunction');
     }
     
     /**
@@ -153,10 +150,7 @@ class bitrix_module extends CModule
         // $EventManager = EventManager::getInstance();
 
         // проверка на спам
-        // $EventManager->unRegisterEventHandler('main', 'OnBeforeProlog', $this->MODULE_ID, 'GoogleCaptcha', 'initCheckSpam');
-
-        // инициализация js
-        // $EventManager->unRegisterEventHandler('main', 'OnProlog', $this->MODULE_ID, 'GoogleCaptcha', 'initJS');
+        // $EventManager->unRegisterEventHandler('main', 'OnBeforeProlog', $this->MODULE_ID, 'ClassName', 'initFunction');
     }
 
     /**
