@@ -10,7 +10,7 @@ function bx_module_id()
     if (empty($module_id))
         $module_id = basename(__DIR__);
 
-    return $module_id;
+    return strtolower($module_id);
 }
 
 /**
@@ -50,4 +50,17 @@ function bx_file_prefix()
         $file_prefix = bx_module_id_prefix() .'_';
 
     return $file_prefix;
+}
+
+/**
+ * Получаем префикс для таблиц БД.
+ */
+function bx_db_prefix()
+{
+    static $db_prefix = '';
+
+    if (empty($db_prefix))
+        $db_prefix = bx_module_id_prefix() .'_';
+
+    return $db_prefix;
 }
